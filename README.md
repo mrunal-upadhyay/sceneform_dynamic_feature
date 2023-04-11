@@ -11,8 +11,10 @@ Steps to load app bundle and test apk locally:
 
 Currently, getting below error when trying to launch the Sceneform Activity:
 
-Invalid ID 0x00000000.2023-04-11 15:56:02.798  9148-9148  AndroidRuntime          com.acedev.dynamicfeature.debug      D  Shutting down VM2023-04-11 15:56:02.798  9148-9148  AndroidRuntime          com.acedev.dynamicfeature.debug      E  FATAL EXCEPTION: main                                                                                                    Process: com.acedev.dynamicfeature.debug, PID: 9148                                                                                                    android.view.InflateException: Binary XML file line #6 in com.acedev.dynamicfeature.debug.sceneform_dynamic_module:layout/sceneform_ux_fragment_layout: Binary XML file line #6 in com.acedev.dynamicfeature.debug.sceneform_dynamic_module:layout/sceneform_ux_fragment_layout: Error inflating class com.google.ar.sceneform.ArSceneView
-                                                                                                    Caused by: android.view.InflateException: Binary XML file line #6 in com.acedev.dynamicfeature.debug.sceneform_dynamic_module:layout/sceneform_ux_fragment_layout: Error inflating class com.google.ar.sceneform.ArSceneView
+```
+Invalid ID 0x00000000.2023-04-11 15:56:02.798  9148-9148  AndroidRuntime        com.acedev.dynamicfeature.debug      
+D  Shutting down VM2023-04-11   E  FATAL EXCEPTION: main                                                                                               Process: com.acedev.dynamicfeature.debug, PID: 9148                                                                                                    android.view.InflateException: Binary XML file line #6 in com.acedev.dynamicfeature.debug.sceneform_dynamic_module:layout/sceneform_ux_fragment_layout: Binary XML file line #6 in com.acedev.dynamicfeature.debug.sceneform_dynamic_module:layout/sceneform_ux_fragment_layout: Error inflating class com.google.ar.sceneform.ArSceneView
+Caused by: android.view.InflateException: Binary XML file line #6 in com.acedev.dynamicfeature.debug.sceneform_dynamic_module:layout/sceneform_ux_fragment_layout: Error inflating class com.google.ar.sceneform.ArSceneView
                                                                                                     Caused by: java.lang.reflect.InvocationTargetException
    at java.lang.reflect.Constructor.newInstance0(Native Method)
    at java.lang.reflect.Constructor.newInstance(Constructor.java:343 undefined)
@@ -57,3 +59,4 @@ Invalid ID 0x00000000.2023-04-11 15:56:02.798  9148-9148  AndroidRuntime        
    at com.google.ar.sceneform.rendering.PlaneRenderer.loadPlaneMaterial(PlaneRenderer.java:339 undefined)
    at com.google.ar.sceneform.rendering.PlaneRenderer.<init>(PlaneRenderer.java:84 undefined)
    at com.google.ar.sceneform.ArSceneView.initializeAr(ArSceneView.java:561 undefined)
+ ```
