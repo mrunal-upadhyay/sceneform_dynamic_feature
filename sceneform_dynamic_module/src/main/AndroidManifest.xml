@@ -16,7 +16,7 @@
     </dist:module>
 
     <application>
-        <activity android:name="com.acedev.dynamicfeature.sceneform_dynamic_module.RegistrationActivity"
+        <activity android:name="com.acedev.dynamicfeature.sceneform_dynamic_module.ArActivity"
             android:exported="true"/>
 
         <!-- Indicates whether "Google Play Services for AR" (ARCore) is "required" or "optional". -->

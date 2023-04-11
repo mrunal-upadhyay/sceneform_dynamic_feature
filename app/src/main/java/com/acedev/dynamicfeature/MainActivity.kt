@@ -13,8 +13,8 @@ import com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListene
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus
 
 private const val TAG = "DynamicFeatures"
-private const val PACKAGE_NAME = "com.acedev.dynamicfeature.registration"
-private const val REGISTRATION_SAMPLE_CLASSNAME = "$PACKAGE_NAME.RegistrationActivity"
+private const val PACKAGE_NAME = "com.acedev.dynamicfeature.sceneform_dynamic_module"
+private const val AR_SAMPLE_CLASSNAME = "$PACKAGE_NAME.ArActivity"
 private const val CONFIRMATION_REQUEST_CODE = 1
 
 class MainActivity : BaseSplitActivity() {
@@ -150,14 +150,14 @@ class MainActivity : BaseSplitActivity() {
 
         // Load and install the requested feature module.
         manager.startInstall(request)
-        toastAndLog("Starting install for"+name)
+        toastAndLog("Starting install for$name")
         //updateProgressMessage(getString(R.string.starting_install_for, name))
     }
 
     private fun onSuccessfulLoad(moduleName: String, launch: Boolean) {
         if (launch) {
             when (moduleName) {
-                moduleSceneform -> launchActivity(REGISTRATION_SAMPLE_CLASSNAME)
+                moduleSceneform -> launchActivity(AR_SAMPLE_CLASSNAME)
                 moduleFragment -> showFragment()
             }
         }
