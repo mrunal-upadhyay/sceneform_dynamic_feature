@@ -4,12 +4,19 @@ In order to reduce app size and deliver sceneform dependencies to limited set of
 
 The application consists of primary app module and sceneform_dynamic_module. When the user clicks on Start Sceneform Activity, app attempts to download the sceneform dependency and launch an AR fragment. 
 
-Steps to load app bundle and test apk locally:
-1. Generate App Bundle -> ./gradlew :app:bundleDebug
-2. Run bundletool to generate apks -> bundletool build-apks --local-testing --bundle app-debug.aab --output app-debug.apks
-3. Connect device and install apks -> bundletool install-apks --apks app-debug.apks
+**Steps to load app bundle and test apk locally:**
+***Step1:*** Download bundletool from here. Rename the jar to `bundletool-all.jar`
+***Step2:*** Open terminal and change current working directory to the one containing the above jar. Run the below command: 
+```alias bundletool='java -jar bundletool-all.jar'``` 
+***Step 3:*** Generate App Bundle 
+```./gradlew :app:bundleDebug```
+***Step 4:*** Run bundletool to generate apks
+```bundletool build-apks --local-testing --bundle app-debug.aab --output app-debug.apks```
+***Step 5:*** Connect device and install apks
+```bundletool install-apks --apks app-debug.apks```
 
-Currently, getting below error when trying to launch the Sceneform Activity:
+
+**Currently, getting below error when trying to launch the Sceneform Activity:**
 
 ```
 Invalid ID 0x00000000.2023-04-11 15:56:02.798  9148-9148  AndroidRuntime        
