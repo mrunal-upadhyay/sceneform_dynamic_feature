@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SceneformDynamicFeature</string>
+    <string name="title_sceneform_dynamic_module">Sceneform Dynamic Module</string>
+    <string name="module_sceneform_dynamic_module">sceneform_dynamic_module</string>
+    <string name="module_fragment_module">fragment_module</string>
+</resources>

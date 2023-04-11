@@ -1,0 +1,1 @@
+include ':app', ':sceneform_dynamic_module'
